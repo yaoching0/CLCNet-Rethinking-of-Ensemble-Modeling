@@ -2,7 +2,9 @@
 
 This repository is the official implementation of [CLCNet](https://arxiv.org/abs/2030.12345). 
 
->📋  Optional: include a graphic explaining your approach/main result, bibtex entry, link to demos, blog posts and tutorials
+### **Architecture Diagram**
+![Architecture](https://github.com/yaoching0/CLCNet/blob/main/images/fig1-1.jpg)
+
 
 ## **1. Requirements**
 
