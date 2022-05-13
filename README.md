@@ -128,4 +128,3 @@ Use the variant of EfficientNet as shallow model and deep model of cascade struc
 | CLCNet (S:B0+D:B4)    |    **83.88%**  |     0.83        |   18.58B         |
 
 > Bold indicates the value of the metric is close to EfficientNet variant, S and D stand for shallow model and deep model respectively, and we use CLCNet to denote the cascade structure system using CLCNet.
-
