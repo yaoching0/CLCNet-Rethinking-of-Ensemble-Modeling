@@ -39,7 +39,7 @@ We support all classification models in the [timm](https://github.com/rwightman/
 
 
 ```generate customized CLCNet dataset
-python generate_data_for_CLCNet.py --data-path <path_of_customized_data> --model <timm_model_name> --model-weight <path_of_model_weight> --num_classes <num_cls> --output <path_of_output_result>
+python generate_data_for_CLCNet.py --data-path <path_of_custom_data> --model <timm_model_name> --model-weight <path_of_model_weight> --num_classes <num_cls> --output <path_of_output_result>
 ```
 
 
