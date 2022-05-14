@@ -77,7 +77,7 @@ To evaluate cascade structure system on ImageNet-1k val, run:
 
 
 ```eval
-python eval(imagenet-5-fold-cv).py --threshold 0.5 --shallow-model tf_efficientnet_b4 --shallow-model-FLOPs 4.2 --deep-model tf_efficientnet_b7 ---deep-model-FLOPs 37
+python eval(imagenet-5-fold-cv).py --threshold 0.5 --shallow-model tf_efficientnet_b4 --shallow-model-FLOPs 4.2 --deep-model tf_efficientnet_b7 --deep-model-FLOPs 37
 ```
 
 The system will automatically use the five CLCNet weights (`[root of repository]\weights`) we trained in the previous step and the weights pre-trained by timm (automatic download, we support all models in timm, see [model list](https://github.com/rwightman/pytorch-image-models/blob/master/results/results-imagenet.csv)) on ImageNet (`[root of repository]\data\imagenet_splits_5\...`) to calculate the accuracy and FLOPs under the _threshold_, and save them as a csv file in `[root of repository]\performance-result.csv`.
