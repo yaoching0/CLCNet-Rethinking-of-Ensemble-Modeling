@@ -46,8 +46,8 @@ python generate_data_for_CLCNet.py --data-path <path_of_customized_data> --model
 ### The generated dataset will be a csv file in the following format:
 
 ```dataset format
-[filename][sorted 1000-dim classifcation probilities][label (1 or 0)] 
-[filename][sorted 1000-dim classifcation probilities][label (1 or 0)] 
+[filename][sorted n-dim(ImageNet:n=1000) classifcation probilities][label (1 or 0)] 
+[filename][sorted n-dim(ImageNet:n=1000) classifcation probilities][label (1 or 0)] 
 ...
 ```
 
@@ -66,7 +66,7 @@ python train(imagenet-5-fold-cv).py --imagenet-split <path_of_downloaded_ImageNe
 Of course, you can also specify training hyperparameters:
 
 ```train
-python train(imagenet-5-fold-cv).py --max-epochs 200 --batch-size 256--imagenet-split <path_of_downloaded_ImageNet> --cls-output <path_of_previous_generated_csv>
+python train(imagenet-5-fold-cv).py --max-epochs 200 --batch-size 256 --imagenet-split <path_of_downloaded_ImageNet> --cls-output <path_of_previous_generated_csv>
 ```
 
 For more details, please see the parameter description in the py file.
@@ -80,25 +80,28 @@ To evaluate cascade structure system on ImageNet-1k val, run:
 python eval(imagenet-5-fold-cv).py --threshold 0.5 --shallow-model tf_efficientnet_b4 --shallow-model-FLOPs 4.2 --deep-model tf_efficientnet_b7 ---deep-model-FLOPs 37
 ```
 
-The system will automatically use the five CLCNet weights (`[root of repository]\weights`) we trained in the previous step and the weights pre-trained by timm (automatic download, we support all models in timm, see [model list](https://github.com/rwightman/pytorch-image-models/blob/master/results/results-imagenet.csv)) on ImageNet (`[root of repository]\data\imagenet_splits_5\...`) to calculate the accuracy and FLOPs under the _threshold_, and save them in the root directory of the repository as a csv file.
+The system will automatically use the five CLCNet weights (`[root of repository]\weights`) we trained in the previous step and the weights pre-trained by timm (automatic download, we support all models in timm, see [model list](https://github.com/rwightman/pytorch-image-models/blob/master/results/results-imagenet.csv)) on ImageNet (`[root of repository]\data\imagenet_splits_5\...`) to calculate the accuracy and FLOPs under the _threshold_, and save them as a csv file in `[root of repository]\performance-result.csv`.
 
-You can also use `--threshold-searching True` to automatically calculate the accuracy and FLOPs under different thresholds between [0.2, 1], the result will be saved in `[root of repository]\performance-result.csv`
+You can also use `--threshold-searching True` to automatically calculate the accuracy and FLOPs under different thresholds between [0.2, 1].
 
 
-## 5. (optional) Training and evaluation with customized data
+## 5. (optional) Training and evaluation with custom data
 
-You can use the dataset obtained in step 3 to train CLCNet without cross validation (so you will only get one weight, amd saved in the `[root of repository]\weights`):
+You can use the dataset obtained in step 3 to train CLCNet without cross validation (so you will only get one weight, and saved in the `[root of repository]\weights`):
 
 ```train
-python train(customized-data).py --cls-output <path_of_previous_generated_csv>
+python train(custom-data).py --cls-output <path_of_previous_generated_csv>
 ```
 
 
-Use the above trained CLCNet weight to test performance of cascade structure system, and the shallow and deep models can be replaced by any timm models trained by custom dataset:
+Use the above trained CLCNet weight to test performance of cascade structure system on custom dataset, and the shallow and deep models can be replaced by any timm models trained by custom dataset:
 
 ```eval
-python eval(customized-data).py --threshold 0.5 --shallow-model tf_efficientnet_b4 --shallow-model-FLOPs 4.2 --shallow-model-weight <path_of_model_weight> --deep-model tf_efficientnet_b7 ---deep-model-FLOPs 37 --deep-model-weight <path_of_model_weight> --num_classes <any_num_cls>
+python eval(custom-data).py --custom-data <custom_dataset_for_inference> --threshold 0.5 --num_classes <any_num_cls> --shallow-model tf_efficientnet_b4 --shallow-model-FLOPs 4.2 --shallow-model-weight <path_of_model_weight> --deep-model tf_efficientnet_b7 ---deep-model-FLOPs 37 --deep-model-weight <path_of_model_weight> 
 ```
+
+The system will infer each image in `<custom_dataset_for_inference>` and save the classification results in `[root of repository]\custom-data-result.csv`.
+
 
 ## **6.Results**
 
