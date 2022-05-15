@@ -66,7 +66,7 @@ python train(imagenet-5-fold-cv).py --imagenet-split <path_of_downloaded_ImageNe
 Of course, you can also specify training hyperparameters:
 
 ```train
-python train(imagenet-5-fold-cv).py --max-epochs 200 --batch-size 256 --imagenet-split <path_of_downloaded_ImageNet> --cls-output <path_of_previous_generated_csv>
+python train(imagenet-5-fold-cv).py --max-epochs 200 --batch-size 256 --imagenet-split <path_of_step2_downloaded_ImageNet> --cls-output <path_of_previous_generated_csv>
 ```
 
 For more details, please see the parameter description in the py file.
