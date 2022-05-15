@@ -13,6 +13,10 @@ To install requirements:
 ```setup
 pip install -r requirements.txt
 ```
+
+Please make sure you have at least 8GB of free GPU memory.
+
+
 ## **2. Download ImageNet-1k validation set**
 
 We divided ImageNet-1k val set into five equal parts for subsequent cross validation : [Google Drive](https://drive.google.com/file/d/1dnFNH0LZfs_UpzDms5FBznupKph38pBV/view?usp=sharing)
