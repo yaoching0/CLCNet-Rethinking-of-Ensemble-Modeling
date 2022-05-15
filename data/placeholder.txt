@@ -1,0 +1,1 @@
+Please put imagenet or custom data into data folder
