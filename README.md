@@ -60,7 +60,7 @@ The path `[root of repository]\weights` already contains the CLCNet weights we t
 First, we use the dataset generated in the previous step to train CLCNet. We divide ImageNet-1k val into 40,000 and 10,000 parts each time, we will only use the 40,000 parts to train and validate CLCNet, repeat five times to make the part of 10,000 dataset cover the entire ImageNet, and generate five CLCNet weights. The weights will be saved in ```[root of repository]\weights``` by default:
 
 ```train
-python train(imagenet-5-fold-cv).py --imagenet-split <path_of_downloaded_ImageNet> --cls-output <path_of_previous_generated_csv>
+python train(imagenet-5-fold-cv).py --imagenet-split <path_of_step2_downloaded_ImageNet> --cls-output <path_of_previous_generated_csv>
 ```
 
 Of course, you can also specify training hyperparameters:
