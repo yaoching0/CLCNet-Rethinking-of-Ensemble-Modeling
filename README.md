@@ -92,7 +92,7 @@ To compare with single model (like EfficientNet-b4) in the system, the values (a
 You can make the model to be tested as the shallow model in the system, and set the threshold to a very small value. So the deep model will not be used, and the accuracy of the system is the accuracy of the shallow model:
 
 ```eval
-python eval(imagenet-5-fold-cv).py --threshold -inf --shallow-model tf_efficientnet_b4
+python eval(imagenet-5-fold-cv).py --threshold -999 --shallow-model tf_efficientnet_b4
 ```
 
 ## 5. (optional) Training and evaluation with custom data
