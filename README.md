@@ -85,6 +85,16 @@ The system will automatically use the five CLCNet weights (`[root of repository]
 You can also use `--threshold-searching True` to automatically calculate the accuracy and FLOPs under different thresholds between [0.2, 1].
 
 
+#### (Important) Single model accuracy
+To compare with single model (like EfficientNet-b4) in the system, the values (accuracy) in the [model list](https://github.com/rwightman/pytorch-image-models/blob/master/results/results-imagenet.csv) will be different under different hardware environments, please test separately.
+
+
+You can make the model to be tested as the shallow model in the system, and set the threshold to a very small value. So the deep model will not be used, and the accuracy of the system is the accuracy of the shallow model:
+
+```eval
+python eval(imagenet-5-fold-cv).py --threshold -inf --shallow-model tf_efficientnet_b4
+```
+
 ## 5. (optional) Training and evaluation with custom data
 
 You can use the dataset obtained in step 3 to train CLCNet without cross validation (so you will only get one weight, and saved in the `[root of repository]\weights`):
