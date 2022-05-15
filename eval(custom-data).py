@@ -66,7 +66,7 @@ if __name__ == '__main__':
     handler.setFormatter(formatter)
     logger.addHandler(handler)
 
-    # define shallow model
+    # define shallow model 
     if cf.shallow_model_weight is None:
         model_s= timm.create_model(cf.shallow_model, pretrained=True)
     else:
