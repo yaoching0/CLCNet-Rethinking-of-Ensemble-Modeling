@@ -37,7 +37,7 @@ Please make sure you have at least 8GB of free GPU memory.
 
 ## <a name="2"></a>**2. Download ImageNet-1k validation set**
 
-We divided ImageNet-1k val set into five equal parts for subsequent cross validation : [Google Drive](https://drive.google.com/file/d/1dnFNH0LZfs_UpzDms5FBznupKph38pBV/view?usp=sharing)
+We divided ImageNet-1k val set into five equal parts for subsequent cross validation: [Google Drive](https://drive.google.com/file/d/1dnFNH0LZfs_UpzDms5FBznupKph38pBV/view?usp=sharing)
 
 Please unzip it and place it in the following path:
 
