@@ -2,7 +2,7 @@
 ![](https://img.shields.io/badge/license-MIT-brightgreen) 
 ![](https://img.shields.io/badge/python-3.9-blue)
 ![](https://img.shields.io/badge/torch-1.10.0-yellowgreen)
-[![](https://img.shields.io/badge/timm-0.5.4-orange)]((https://github.com/rwightman/pytorch-image-models))
+[![](https://img.shields.io/badge/timm-0.5.4-orange)](https://github.com/rwightman/pytorch-image-models)
 
 This repository is the official implementation of [CLCNet](https://arxiv.org/abs/2030.12345). 
 
