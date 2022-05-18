@@ -104,7 +104,7 @@ python eval-imagenet-5-fold-cv.py --threshold 0.5 --shallow-model tf_efficientne
 
 The system will automatically use the five CLCNet weights (`[root of repository]\weights`) we trained in the previous step and the weights pre-trained by timm (automatic download, we support all models in timm, see [model list](https://github.com/rwightman/pytorch-image-models/blob/master/results/results-imagenet.csv)) on ImageNet (`[root of repository]\data\imagenet_splits_5\...`) to calculate the accuracy and FLOPs under the _threshold_, and save them as a csv file in `[root of repository]\performance-result.csv`.
 
-You can also use `--threshold-searching True` to automatically calculate the accuracy and FLOPs under different thresholds between [0.05, 1.01].
+You can also use `--threshold-searching` to automatically calculate the accuracy and FLOPs under different thresholds between [0.05, 1.01].
 
 
 #### (Important) Single model accuracy
