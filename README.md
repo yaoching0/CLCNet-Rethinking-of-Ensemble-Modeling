@@ -152,15 +152,15 @@ Use the variant of EfficientNet as shallow model and deep model of cascade struc
 | CLCNet (S:B0+D:B4)    |    81.19%  |       0.43      |    **1.77B**        |
 | CLCNet (S:B0+D:B4)    |    **80.50%**  |     0.39        |    1.42B        |
 | EfficientNet-B4    |     82.00%  |       --       |      4.2B      |
-| CLCNet (S:B0+D:B4)    |   **82.02%**   |      0.05       |    **4.27B**       |
+| CLCNet (S:B4+D:B7)    |   **82.02%**   |      0.05       |    **4.27B**       |
 | EfficientNet-B5    |     82.72%  |       --       |      9.9B      |
-| CLCNet (S:B0+D:B4)    |  83.59%   |      0.45       |     **9.94B**       |
-| CLCNet (S:B0+D:B4)    |    **82.75%**  |      0.27       |    6.1B        |
+| CLCNet (S:B4+D:B7)   |  83.59%   |      0.45       |     **9.94B**       |
+| CLCNet (S:B4+D:B7)   |    **82.75%**  |      0.27       |    6.1B        |
 | EfficientNet-B6    |     83.30%  |       --       |      19B      |
-| CLCNet (S:B0+D:B4)    |   83.88%   |      0.83       |    **18.58B**        |
-| CLCNet (S:B0+D:B4)    |    **83.42%**  |      0.39       |    8.95B        |
+| CLCNet (S:B4+D:B7)    |   83.88%   |      0.83       |    **18.58B**        |
+| CLCNet (S:B4+D:B7)   |    **83.42%**  |      0.39       |    8.95B        |
 | EfficientNet-B7    |     83.80%  |       --       |      37B      |
-| CLCNet (S:B0+D:B4)    |    **83.88%**  |     0.83        |   18.58B         |
+| CLCNet (S:B4+D:B7)    |    **83.88%**  |     0.83        |   18.58B         |
 
 > Bold indicates the value of the metric is close to EfficientNet variant, S and D stand for shallow model and deep model respectively, and we use CLCNet to denote the cascade structure system using CLCNet.
 
