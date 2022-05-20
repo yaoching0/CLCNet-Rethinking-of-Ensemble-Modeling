@@ -4,7 +4,7 @@
 ![](https://img.shields.io/badge/torch-1.10.0-yellowgreen)
 [![](https://img.shields.io/badge/timm-0.5.4-orange)](https://github.com/rwightman/pytorch-image-models)
 
-This repository is the official implementation of [CLCNet](https://arxiv.org/abs/2030.12345). 
+This repository is the official implementation of [CLCNet](https://arxiv.org/abs/2205.09612). 
 
 ### **Architecture Diagram**
 ![Architecture](https://github.com/yaoching0/CLCNet/blob/main/images/fig1-1.jpg)
