@@ -129,7 +129,7 @@ python train-custom-data.py --cls-output <path_of_previous_generated_csv>
 Use the above trained CLCNet weight to test performance of cascade structure system on custom dataset, and the shallow and deep models can be replaced by any timm [models](https://github.com/rwightman/pytorch-image-models/blob/master/results/results-imagenet.csv) trained by custom dataset:
 
 ```eval
-python eval-custom-data.py --custom-data <custom_dataset_for_inference> --threshold 0.5 --num_classes <any_num_cls> --shallow-model tf_efficientnet_b4 --shallow-model-FLOPs 4.2 --shallow-model-weight <path_of_model_weight> --deep-model tf_efficientnet_b7 ---deep-model-FLOPs 37 --deep-model-weight <path_of_model_weight> 
+python eval-custom-data.py --custom-data <custom_dataset_for_inference> --threshold 0.5 --num_classes <any_num_cls> --shallow-model tf_efficientnet_b4 --shallow-model-FLOPs 4.2 --shallow-model-weight <path_of_model_weight> --deep-model tf_efficientnet_b7 --deep-model-FLOPs 37 --deep-model-weight <path_of_model_weight> 
 ```
 
 The system will infer each image in `<custom_dataset_for_inference>` and save the classification results in `[root of repository]\custom-data-result.csv`.
