@@ -125,6 +125,12 @@ You can use the dataset obtained in step 3 to train CLCNet without cross validat
 python train-custom-data.py --cls-output <path_of_previous_generated_csv>
 ```
 
+You can also generate specific dataset of classification results of any dimension to train CLCNet using the above command, which will achieve better performance on your own tasks. You only need to make sure that the generated dataset is a csv file in the following format:
+```
+[filename][sorted n-dim classifcation probilities][label (1 or 0)] 
+[filename][sorted n-dim classifcation probilities][label (1 or 0)] 
+...
+```
 
 Use the above trained CLCNet weight to test performance of cascade structure system on custom dataset, and the shallow and deep models can be replaced by any timm [models](https://github.com/rwightman/pytorch-image-models/blob/master/results/results-imagenet.csv) trained by custom dataset:
 
