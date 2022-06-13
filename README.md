@@ -20,9 +20,11 @@ This repository is the official implementation of [CLCNet](https://arxiv.org/abs
 
 [5. (optional) Training and evaluation with custom data](#5)
 
-[6. Results](#6)
+[6. (optional) Tutorials](#6)
 
-[7. Acknowledgements](#7)
+[7. Results](#7)
+
+[8. Acknowledgements](#8)
 
 ## <a name="1"></a>**1. Requirements**
 
@@ -141,7 +143,12 @@ python eval-custom-data.py --custom-data <custom_dataset_for_inference> --thresh
 The system will infer each image in `<custom_dataset_for_inference>` and save the classification results in `[root of repository]\custom-data-result.csv`.
 
 
-## <a name="6"></a>**6. Results**
+## <a name="6"></a>**6. (optional) Tutorials**
+
+If you just want to use CLCNet to predict whether the classification results are correct, please check this tutorial:
+- [Tutorial for CLCNet](https://github.com/yaoching0/CLCNet-Rethinking-of-Ensemble-Modeling/blob/main/Tutorial_for_CLCNet.ipynb)
+
+## <a name="7"></a>**7. Results**
 
 Use the variant of EfficientNet as shallow model and deep model of cascade structure system, and compare with the original EfficientNet on ImageNet-1k:
 
@@ -170,7 +177,7 @@ Use the variant of EfficientNet as shallow model and deep model of cascade struc
 
 > Bold indicates the value of the metric is close to EfficientNet variant, S and D stand for shallow model and deep model respectively, and we use CLCNet to denote the cascade structure system using CLCNet.
 
-## <a name="7"></a>**7. Acknowledgements**
+## <a name="8"></a>**8. Acknowledgements**
 Our implementation uses the source code from the following repositories:
 
 - [PyTorch Image Models](https://github.com/rwightman/pytorch-image-models)
