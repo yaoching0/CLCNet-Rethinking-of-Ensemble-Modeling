@@ -155,7 +155,7 @@ If you just want to use CLCNet to predict whether the classification results are
 
 ## <a name="7"></a>**7. Results**
 
-Use the variant of EfficientNet as shallow model and deep model of cascade structure system, and compare with the original EfficientNet on ImageNet-1k:
+- Use the variant of EfficientNet as shallow model and deep model of cascade structure system, and compare with the original EfficientNet on ImageNet-1k:
 
 
 | Model name         | Top 1 Accuracy  |   Threshold    | FLOPs per image |
@@ -181,6 +181,31 @@ Use the variant of EfficientNet as shallow model and deep model of cascade struc
 | CLCNet (S:B4+D:B7)    |    **83.88%**  |     0.83        |   18.58B         |
 
 > Bold indicates the value of the metric is close to EfficientNet variant, S and D stand for shallow model and deep model respectively, and we use CLCNet to denote the cascade structure system using CLCNet.
+
+- Use completely different models as shallow model and deep model, and compare with general ensemble modeling (GEM):
+
+
+| Model name         | Top 1 Accuracy  |   Threshold    | FLOPs per image |
+---|:--:|:--:|:--:|
+| EfficientNet-B0    |     75.40%  |       --       |      0.39B      |
+| EfficientNet-B1    |     77.64%  |       --       |      0.7B      |
+| CLCNet (S:B0+D:B4)    |   **77.74%**   |       0.19      |    **0.74B**       |
+| EfficientNet-B2    |     78.73%  |       --       |      1.0B      |
+| CLCNet (S:B0+D:B4)    |   79.06%   |      0.27       |     **0.996B**       |
+| CLCNet (S:B0+D:B4)    |    **78.71%**  |       0.25      |     0.933B       |
+| EfficientNet-B3    |     80.52%  |       --       |      1.8B      |
+| CLCNet (S:B0+D:B4)    |    81.19%  |       0.43      |    **1.77B**        |
+| CLCNet (S:B0+D:B4)    |    **80.50%**  |     0.39        |    1.42B        |
+| EfficientNet-B4    |     82.00%  |       --       |      4.2B      |
+| CLCNet (S:B4+D:B7)    |   **82.02%**   |      0.05       |    **4.27B**       |
+| EfficientNet-B5    |     82.72%  |       --       |      9.9B      |
+| CLCNet (S:B4+D:B7)   |  83.59%   |      0.45       |     **9.94B**       |
+| CLCNet (S:B4+D:B7)   |    **82.75%**  |      0.27       |    6.1B        |
+| EfficientNet-B6    |     83.30%  |       --       |      19B      |
+| CLCNet (S:B4+D:B7)    |   83.88%   |      0.83       |    **18.58B**        |
+| CLCNet (S:B4+D:B7)   |    **83.42%**  |      0.39       |    8.95B        |
+| EfficientNet-B7    |     83.80%  |       --       |      37B      |
+| CLCNet (S:B4+D:B7)    |    **83.88%**  |     0.83        |   18.58B         |
 
 ## <a name="8"></a>**8. Acknowledgements**
 Our implementation uses the source code from the following repositories:
